@@ -19,33 +19,22 @@ admin/dist
 .env.*
 !.env.example
 
-# Large binary media that should not live in git history.
-# Keep these out of the repository and upload them with the deploy, or use Git LFS.
-public/assets/background/*.mp4
+# Large binary media.
+#
+# These rules originally excluded ALL video, on the assumption that the build
+# directory would be uploaded to a host separately. That assumption no longer
+# holds: Vercel builds from this repository and ships only what git contains, so
+# an excluded asset is a 404 in production — the hero video simply would not
+# exist, and the site would fall back to the poster on every device.
+#
+# The one video the site actually uses is therefore committed. At 876 KB that is
+# an unremarkable thing to keep in git, and far simpler than Git LFS or
+# out-of-band hosting for a single file that never changes.
 public/assets/background/*.webm
 public/assets/audio/*.mp3
 public/assets/audio/*.m4a
-# ...except the temporary placeholder, so a fresh clone still runs.
+# The clip the site uses, and the stand-in audio, so a fresh clone runs as-is.
+!public/assets/background/cabin-background.mp4
 !public/assets/audio/placeholder-ambient.mp3
-
-# --- carried over from the monorepo root ignore file, which this repository no
-# --- longer inherits. Do not drop these.
-
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-
-# Editor and OS
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.sw?
-
-# Database dumps. Backups belong outside the repository entirely, but a mistyped
-# --file should not become a commit.
-*.dump
-*.sql.gz
+# The unused alternative clip stays out; see public/assets/background/README.md.
+public/assets/background/cabin-background-alt.mp4
