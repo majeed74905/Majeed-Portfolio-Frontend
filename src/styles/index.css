@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* ============================================================================
+   BASE
+   Only genuinely global rules live here. Everything else is a component.
+   ========================================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Sections are anchor targets; keep them clear of the fixed header. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* The video/3D layer is fixed behind content; never scroll sideways. */
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, on-brand focus ring. Never remove this without a replacement. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background-color: var(--color-forest);
+    color: var(--color-ink);
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-surface-elevated) transparent;
+  }
+
+  /* WebKit */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-surface-elevated);
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--color-bg);
+  }
+}
+
+/* ============================================================================
+   REDUCED MOTION
+   A global backstop. Components that own real animation must ALSO check
+   usePrefersReducedMotion() so they can render a meaningful static state
+   rather than a frozen half-finished one.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   KEYFRAMES
+   The only global animation. Everything else is a transition on a component.
+   ========================================================================== */
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+/* ============================================================================
+   UTILITIES
+   ========================================================================== */
+
+@utility glass-panel {
+  background-color: var(--color-glass);
+  backdrop-filter: blur(var(--blur-glass)) saturate(1.1);
+  -webkit-backdrop-filter: blur(var(--blur-glass)) saturate(1.1);
+  border: 1px solid var(--color-glass-hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Skip-link: off-screen until focused. */
+@utility skip-link {
+  position: absolute;
+  left: var(--space-md);
+  top: var(--space-md);
+  z-index: 100;
+  transform: translateY(-200%);
+  transition: transform var(--motion-fast) var(--ease-standard);
+
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}

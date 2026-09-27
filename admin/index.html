@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The admin must never be indexed. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <title>MJ Admin</title>
+    <meta name="theme-color" content="#0d1211" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- `media="print"` keeps the stylesheet off the critical path; the app
+         flips it to `all` once mounted. The flip lives in the bundle rather
+         than in an inline `onload` handler so the Content-Security-Policy can
+         forbid inline script — one handler would mean
+         `script-src 'unsafe-inline'`, which is most of the protection gone. -->
+    <link
+      id="webfonts"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+      media="print"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

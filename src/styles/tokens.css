@@ -1,0 +1,191 @@
+/* ============================================================================
+   DESIGN TOKENS — single source of truth
+   ----------------------------------------------------------------------------
+   Every colour, type size, space, radius, shadow and motion value used anywhere
+   in this project is declared here. Components must NEVER hard-code a hex value,
+   a px radius, or a transition duration.
+
+   Tailwind v4 reads this `@theme` block and generates utilities from it:
+     --color-forest        -> bg-forest / text-forest / border-forest
+     --text-display        -> text-display
+     --radius-lg           -> rounded-lg
+     --shadow-elevated     -> shadow-elevated
+     --ease-cinematic      -> ease-cinematic
+   Values that Tailwind has no namespace for (motion durations, semantic spacing)
+   are still emitted as CSS custom properties and used via var().
+
+   PALETTE INTENT: a dark cabin interior at golden hour. Charcoal and near-black
+   ground, warm off-white ink, forest and olive greens for life, aged gold and
+   wood brown for warmth. No violet. No neon. No pure #000 and no pure #FFF —
+   natural materials are never absolute.
+   ========================================================================== */
+
+@theme {
+  /* ---------------------------------------------------------------- COLOUR */
+
+  /* NAME MAPPING — the approved palette, and the token that carries each one.
+     There is exactly one token per concept; no aliases, so there is never a
+     question of which to reach for.
+
+       charcoal        -> --color-bg           (page ground)
+       deep black      -> --color-bg-deep      (deepest surface, button ink)
+       forest green    -> --color-forest / --color-forest-bright
+       olive           -> --color-olive
+       warm gold       -> --color-gold / --color-gold-soft
+       wood brown      -> --color-wood / --color-wood-light
+       warm white      -> --color-ink          (primary type)
+       muted text      -> --color-ink-secondary, --color-muted
+       glass surface   -> --color-glass, --color-glass-strong
+       glass border    -> --color-glass-hairline                              */
+
+  /* Ground */
+  --color-bg: #0a0e0c;
+  --color-bg-deep: #060908;
+
+  /* Scrim channels, kept raw so alpha can be composed per layer:
+     rgb(var(--scrim-rgb) / <alpha>) */
+  --scrim-rgb: 6 9 8;
+  --color-surface: #111614;
+  --color-surface-elevated: #19201c;
+
+  /* Glass — restrained. Used with backdrop-blur, never on its own. */
+  --color-glass: rgb(17 22 20 / 0.55);
+  --color-glass-strong: rgb(10 14 12 / 0.74);
+  --color-glass-hairline: rgb(238 232 220 / 0.14);
+
+  /* Borders */
+  --color-border: rgb(238 232 220 / 0.1);
+  --color-border-strong: rgb(238 232 220 / 0.18);
+
+  /* Ink — all four pass WCAG AA on --color-bg (see docs/SPEC.md) */
+  --color-ink: #f4f0e8; /* text-primary   ~16.9:1 */
+  --color-ink-secondary: #c6c0b2; /* text-secondary ~10.5:1 */
+  --color-muted: #8e887b; /* muted          ~5.6:1  */
+  --color-faint: #6b665c; /* decorative only — NOT for body text */
+
+  /* Nature accents */
+  --color-forest: #2e5b45;
+  --color-forest-bright: #4e9070; /* ~5.2:1 — safe for text */
+  --color-olive: #7f8f5e;
+  --color-gold: #d9a855; /* ~9.6:1 — primary accent */
+  --color-gold-soft: #ebc98d;
+  --color-wood: #6c4b33;
+  --color-wood-light: #8e6845;
+
+  /* Feedback */
+  --color-danger: #d97a63;
+  --color-success: #4e9070;
+
+  /* ------------------------------------------------------------ TYPOGRAPHY */
+
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia,
+    serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+
+  /* display — hero only, once per page */
+  --text-display: clamp(3rem, 7vw, 6rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.03em;
+
+  /* heading */
+  --text-h1: clamp(2.25rem, 4.5vw, 3.5rem);
+  --text-h1--line-height: 1.06;
+  --text-h1--letter-spacing: -0.02em;
+
+  --text-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --text-h2--line-height: 1.12;
+  --text-h2--letter-spacing: -0.015em;
+
+  --text-h3: clamp(1.2rem, 2vw, 1.5rem);
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.01em;
+
+  /* body */
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.7;
+
+  --text-body-lg: 1.1875rem;
+  --text-body-lg--line-height: 1.65;
+
+  /* caption — small tracked labels, eyebrows, metadata */
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.45;
+  --text-caption--letter-spacing: 0.08em;
+
+  /* --------------------------------------------------------------- SPACING */
+  /* Tailwind's numeric scale (p-4, gap-6, ...) stays available.
+     These semantic steps are for layout rhythm. */
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.25rem;
+  --space-2xl: 5rem;
+
+  /* Vertical rhythm between top-level sections */
+  --space-section: clamp(5rem, 11vh, 9rem);
+
+  /* Horizontal page gutter + max content width */
+  --space-gutter: clamp(1.25rem, 5vw, 4rem);
+  --width-content: 76rem;
+  --width-prose: 42rem;
+
+  /* ---------------------------------------------------------------- RADIUS */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  /* --------------------------------------------------------------- SHADOWS */
+  /* Warm-tinted, never neutral grey — light in this scene is amber. */
+
+  --shadow-subtle: 0 1px 2px rgb(6 9 8 / 0.4), 0 4px 16px rgb(6 9 8 / 0.28);
+  --shadow-elevated: 0 2px 4px rgb(6 9 8 / 0.45), 0 12px 40px rgb(6 9 8 / 0.5);
+
+  /* ---------------------------------------------------------------- MOTION */
+
+  --motion-fast: 160ms;
+  --motion-normal: 280ms;
+  --motion-slow: 560ms;
+
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ------------------------------------------------------------------ MISC */
+
+  --blur-glass: 14px;
+
+  /* ---------------------------------------------------- VIDEO SCRIM
+     MEASURED from the actual installed clip, not guessed. Every frame of
+     cabin-background.mp4 was sampled (method + numbers in docs/SPEC.md).
+
+     The footage is golden-hour: the sun through the window blows out to pure
+     white (relative luminance 1.0) in the CENTRE-RIGHT of frame. Against that
+     pixel, --color-ink on its own scores 1.14:1 — invisible.
+
+     Scrim needed for 7:1, measured per zone across the text band:
+       left third   median 0.066  p99 0.554  ->  0.55
+       centre third median 0.195  p99 0.947  ->  0.64
+       right third  median 0.065  p99 0.949  ->  0.64
+
+     So the left column is genuinely the safe place for type, and a flat scrim
+     heavy enough for the centre would flatten the whole shot. Instead: a light
+     base over everything, plus extra density banded over the copy column only.
+     Composited on the left that lands at ~0.61 — above the 0.55 requirement.
+     The sun keeps its punch on the right, where no bare ink is allowed.
+
+     RULE: bare ink lives in the left column only. Anywhere else it goes on
+     glass, which brings its own --color-glass darkening. */
+  --overlay-video-base: 0.32;
+  --overlay-video-text: 0.5;
+  /* Small viewports get no video at all (poster only) and copy runs full width,
+     so they use one flat scrim heavy enough for the whole frame. */
+  --overlay-video-flat: 0.7;
+  /* Vignette strength at the frame edge. */
+  --overlay-vignette: 0.5;
+}

@@ -1,0 +1,29 @@
+# Frontend (Vercel) generated files.
+#
+# Paths here are relative to `frontend/`, which is what makes them survive a
+# directory reorganisation — the previous root-level `public/assets/...` patterns
+# silently stopped matching when this application moved, and the excluded video
+# files became committable.
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# The admin is a separate npm project nested here, with its own dependency tree.
+admin/node_modules
+admin/dist
+
+# Environment. Only the template is tracked.
+.env
+.env.*
+!.env.example
+
+# Large binary media that should not live in git history.
+# Keep these out of the repository and upload them with the deploy, or use Git LFS.
+public/assets/background/*.mp4
+public/assets/background/*.webm
+public/assets/audio/*.mp3
+public/assets/audio/*.m4a
+# ...except the temporary placeholder, so a fresh clone still runs.
+!public/assets/audio/placeholder-ambient.mp3

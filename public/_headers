@@ -1,0 +1,48 @@
+# Response headers for the static site.
+#
+# NOT THE AUTHORITATIVE COPY. The chosen host is Vercel, which does not read
+# this file — `vercel.json` is what actually applies these headers in
+# production, and it is the one to edit. This file is kept only so the same
+# headers travel with the build if it is ever served from Netlify or Cloudflare
+# Pages instead, and the two must be changed together.
+#
+# `docs/DEPLOYMENT.md` carries the nginx and Apache equivalents as well.
+#
+# FORMAT: Netlify / Cloudflare Pages `_headers` syntax. It is a plain text file,
+# so it is inert on any host that does not read it — including Vercel.
+#
+# The Content-Security-Policy is NOT here. It is injected into index.html at
+# build time (see the `inject-csp` plugin in vite.config.ts) so that it travels
+# with the build to any host. The three directives below are the ones a meta tag
+# cannot express.
+
+/*
+  # Clickjacking. frame-ancestors is the modern form and is IGNORED in a meta
+  # tag, which is why it has to be a real header. X-Frame-Options is kept for
+  # older browsers that do not implement it.
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Frame-Options: DENY
+
+  # HSTS is ignored in a meta tag and over plain HTTP. Two years, with
+  # subdomains. Do not add `preload` until the domain is settled — it is
+  # difficult to reverse.
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+
+  # Never let a browser second-guess a declared content type.
+  X-Content-Type-Options: nosniff
+
+  # Send the origin to third parties, the full URL only to ourselves.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # This site needs none of these. Denying them stops an injected script from
+  # asking the visitor for them in our name.
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+
+  # Keep this document out of other origins' process, so a cross-origin leak
+  # cannot read it.
+  Cross-Origin-Opener-Policy: same-origin
+
+# Hashed build assets are immutable — the filename changes when the content
+# does, so they can be cached forever.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

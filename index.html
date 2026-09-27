@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mohammed Majeed J — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Full stack developer working across Python backends, React interfaces and applied AI. Selected projects, skills and background."
+    />
+    <meta name="theme-color" content="#0a0e0c" />
+    <meta name="color-scheme" content="dark" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph. The canonical link, og:url and an ABSOLUTE og:image are
+         added at build time from VITE_SITE_URL (see vite.config.ts). They are
+         omitted entirely when it is unset, because a link preview pointing at
+         the wrong domain is worse than no preview. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mohammed Majeed J — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full stack developer working across Python backends, React interfaces and applied AI."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts. The site is fully legible in the fallback stack if these fail,
+         so they are never render-blocking: `media="print"` keeps the stylesheet
+         out of the critical path and the app flips it to `all` once mounted.
+
+         The flip used to be an inline `onload="this.media='all'"` handler. It
+         was moved into the bundle so the Content-Security-Policy does not have
+         to allow inline script — one inline handler would have meant
+         `script-src 'unsafe-inline'`, which is most of the protection gone. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      id="webfonts"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
+      media="print"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
+      />
+    </noscript>
+
+    <!-- The poster is the first meaningful paint of the hero, so fetch it early.
+         The video itself is deliberately NOT preloaded — it is decided at
+         runtime by useCanvasPolicy and must not compete with content. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/background/cabin-poster.webp"
+      type="image/webp"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 2rem; color: #f4f0e8">
+        This portfolio needs JavaScript enabled to display.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

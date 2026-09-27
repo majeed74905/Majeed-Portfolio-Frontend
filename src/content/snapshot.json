@@ -1,0 +1,817 @@
+{
+  "_meta": {
+    "source": "published",
+    "snapshotId": "1fc2d6bc-523c-4917-ae84-9c52042b49fd",
+    "checksum": "8ab3cb09a18a61c89d1a36d113e2528450c4525c0a80505e1e262491e1ae2c23",
+    "publishedAt": "2026-09-23T17:00:11.620193+00:00",
+    "blocking": [],
+    "warnings": [],
+    "mediaFiles": 27
+  },
+  "home": {
+    "music": {
+      "audio": {
+        "id": "5fe231b0-bf39-429c-8879-280bfa437dbc",
+        "alt": null,
+        "url": "/assets/audio/placeholder-ambient.mp3",
+        "kind": "audio",
+        "width": null,
+        "height": null
+      },
+      "title": "Ambient placeholder",
+      "artist": "Temporary — replace before launch",
+      "enabled": true,
+      "defaultVolume": 0.4,
+      "isPlaceholder": true
+    },
+    "notes": {
+      "label": "Field notes",
+      "lines": []
+    },
+    "roles": [
+      "Full Stack Developer",
+      "Python Backend Specialist",
+      "AI Enthusiast"
+    ],
+    "resume": null,
+    "greeting": "Welcome",
+    "headline": "I build systems that hold together.",
+    "background": {
+      "video": {
+        "id": "2ceea6ed-acc9-4199-913d-7ab4e7d5e354",
+        "alt": null,
+        "url": "/assets/background/cabin-background.mp4",
+        "kind": "video",
+        "width": 848,
+        "height": 478
+      },
+      "poster": {
+        "id": "9654cd07-f511-4e0e-9122-8c9b22a9d340",
+        "alt": "",
+        "url": "/assets/background/cabin-poster.webp",
+        "kind": "image",
+        "width": 848,
+        "height": 478
+      }
+    },
+    "primaryCta": {
+      "href": "#projects",
+      "label": "View Projects"
+    },
+    "introduction": "I work across the whole stack — Python and FastAPI services, React interfaces, and the data and AI layers in between. This is a selection of what I have built and how I approach the work.",
+    "technologyHighlights": [
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind CSS"
+    ]
+  },
+  "site": {
+    "seo": {
+      "title": "Mohammed Majeed J — Full Stack Developer",
+      "ogImage": null,
+      "description": "Full stack developer working across Python backends, React interfaces and applied AI. Selected projects, skills and background."
+    },
+    "url": null,
+    "name": "Mohammed Majeed J",
+    "locale": "en",
+    "social": [
+      {
+        "href": "https://github.com/majeed74905",
+        "label": "GitHub",
+        "external": true
+      },
+      {
+        "href": "https://www.linkedin.com/in/mohammed-majeed-a337842a4",
+        "label": "LinkedIn",
+        "external": true
+      },
+      {
+        "href": "https://www.instagram.com/md_afzal_3237/",
+        "label": "Instagram",
+        "external": true
+      },
+      {
+        "href": "mailto:majeed74905@gmail.com",
+        "label": "Email",
+        "external": true
+      }
+    ],
+    "monogram": "MJ",
+    "shortName": "Mohammed Majeed",
+    "footerNote": "Designed and built by Mohammed Majeed J.",
+    "maintenanceMode": false
+  },
+  "about": {
+    "facts": [
+      {
+        "label": "Studying",
+        "value": "MCA · Periyar University"
+      },
+      {
+        "label": "Projects shipped",
+        "value": "4"
+      },
+      {
+        "label": "Publicly deployed",
+        "value": "3"
+      },
+      {
+        "label": "In production",
+        "value": "Periyar University"
+      }
+    ],
+    "portrait": {
+      "id": "98a628f0-1574-4b7a-99db-c51d06037656",
+      "alt": "Mohammed Majeed J",
+      "url": "/assets/images/portrait-1024.webp",
+      "kind": "image",
+      "width": 1024,
+      "height": 1538
+    },
+    "biography": [
+      "I am an MCA student at Periyar University, and most of what I know came from building things other people then had to use. The largest of those is the university's own PhD admission platform — four separate portals over one MySQL database — which now runs in production for its research admissions.",
+      "The rest of my work spans the stack rather than one corner of it: a React and TypeScript AI workspace built against Gemini and Groq, a scikit-learn classifier served through Flask, and a PHP records system from my undergraduate final year. Different languages, the same habit — get the data model right first, then make the interface honest about it."
+    ],
+    "education": [
+      {
+        "end": null,
+        "start": null,
+        "degree": "Master of Computer Applications (MCA)",
+        "location": null,
+        "description": null,
+        "institution": "Periyar University"
+      },
+      {
+        "end": null,
+        "start": null,
+        "degree": "Bachelor of Computer Applications (BCA)",
+        "location": null,
+        "description": null,
+        "institution": "Islamiah College (Autonomous)"
+      }
+    ],
+    "expertise": [
+      {
+        "title": "Full Stack Development",
+        "summary": "React and TypeScript interfaces backed by APIs I also build."
+      },
+      {
+        "title": "Python Backend Engineering",
+        "summary": "FastAPI services, relational data modelling, and API design."
+      },
+      {
+        "title": "Applied AI",
+        "summary": "Building on top of hosted model APIs and integrating them into products."
+      },
+      {
+        "title": "Cloud & Deployment",
+        "summary": "Shipping and running applications on managed cloud platforms."
+      }
+    ],
+    "interests": [
+      "AI and machine learning",
+      "Scalable backend systems",
+      "Cloud infrastructure",
+      "Cybersecurity"
+    ],
+    "introduction": "I am a full stack developer focused on backend engineering with Python and applied AI."
+  },
+  "career": [
+    {
+      "id": "4cffaf98-c418-4016-9d76-1ee794d283d5",
+      "end": null,
+      "type": "education",
+      "start": null,
+      "title": "Master of Computer Applications",
+      "location": null,
+      "description": null,
+      "organization": "Periyar University",
+      "technologies": []
+    },
+    {
+      "id": "2a854565-b197-491b-978c-78ef5c57a293",
+      "end": null,
+      "type": "education",
+      "start": null,
+      "title": "Bachelor of Computer Applications",
+      "location": null,
+      "description": null,
+      "organization": "Islamiah College (Autonomous)",
+      "technologies": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "programming",
+      "label": "Languages",
+      "skills": [
+        {
+          "name": "Python",
+          "note": null
+        },
+        {
+          "name": "JavaScript",
+          "note": null
+        },
+        {
+          "name": "TypeScript",
+          "note": null
+        }
+      ],
+      "summary": "The languages I write day to day."
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "skills": [
+        {
+          "name": "React",
+          "note": null
+        },
+        {
+          "name": "Vite",
+          "note": null
+        },
+        {
+          "name": "Tailwind CSS",
+          "note": null
+        }
+      ],
+      "summary": "Interfaces, build tooling and styling."
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "skills": [
+        {
+          "name": "FastAPI",
+          "note": null
+        },
+        {
+          "name": "Node.js",
+          "note": null
+        },
+        {
+          "name": "Express",
+          "note": null
+        }
+      ],
+      "summary": "APIs and server-side services."
+    },
+    {
+      "id": "database",
+      "label": "Data",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "note": null
+        },
+        {
+          "name": "MySQL",
+          "note": null
+        },
+        {
+          "name": "Prisma",
+          "note": null
+        }
+      ],
+      "summary": "Storage, schema design and access layers."
+    },
+    {
+      "id": "ai-ml",
+      "label": "AI / ML",
+      "skills": [
+        {
+          "name": "OpenAI",
+          "note": null
+        },
+        {
+          "name": "Google Gemini",
+          "note": null
+        },
+        {
+          "name": "Anthropic Claude",
+          "note": null
+        },
+        {
+          "name": "Groq",
+          "note": null
+        },
+        {
+          "name": "DeepSeek",
+          "note": null
+        },
+        {
+          "name": "Hugging Face",
+          "note": null
+        }
+      ],
+      "summary": "Model providers and tooling I have built against."
+    },
+    {
+      "id": "tools-cloud",
+      "label": "Cloud & Tools",
+      "skills": [
+        {
+          "name": "AWS",
+          "note": null
+        },
+        {
+          "name": "Netlify",
+          "note": null
+        },
+        {
+          "name": "Railway",
+          "note": null
+        },
+        {
+          "name": "Render",
+          "note": null
+        }
+      ],
+      "summary": "Where the work gets deployed and run."
+    }
+  ],
+  "projects": [
+    {
+      "slug": "periyar-phd-admission-system",
+      "cover": {
+        "id": "9c6c5f3a-7f54-4b90-9249-2ca61e27bbdd",
+        "alt": "Screenshot of the phd project",
+        "url": "/assets/projects/phd-1280.webp",
+        "kind": "image",
+        "width": 1280,
+        "height": 800
+      },
+      "order": 1,
+      "title": "Periyar University PhD Admission Management System",
+      "status": "live",
+      "liveUrl": "http://research.periyaruniversity.ac.in/rnd-app/student-app/home",
+      "problem": null,
+      "results": [],
+      "summary": "A comprehensive web-based PhD Admission Management System developed to streamline and digitize the university's research admission workflow. The platform provides structured student and administrative workflows for managing the PhD admission process through dedicated web interfaces.",
+      "category": "Full-Stack Web Application",
+      "featured": true,
+      "features": [],
+      "githubUrl": "https://github.com/majeed74905/project-cdoe",
+      "solutions": [],
+      "challenges": [],
+      "highlights": [
+        "Four separate portals — student, admin, supervisor and research centre — sharing one MySQL database",
+        "JWT authentication with per-module secrets, Argon2 password hashing and Redis-backed rate limiting",
+        "Versioned SQL migrations covering the admission workflow, eligibility rules and payment handling",
+        "Queued transactional email through a dedicated NestJS + BullMQ service",
+        "Document uploads, plus generated PDFs, Excel exports and QR codes",
+        "Containerised with Docker Compose behind an Nginx reverse proxy"
+      ],
+      "shortTitle": "PhD Admission Management System",
+      "description": [
+        "The system is organised as a monorepo of four independent portals — student, admin, supervisor and research centre — each with its own React frontend and Express API, all sharing a single MySQL database. A separate NestJS service owns queued email delivery."
+      ],
+      "architecture": "Monorepo with four independent portals, each a React + Vite frontend paired with its own Express API, sharing one MySQL schema. Shared database pooling, mail transport and JWT middleware live in a common module. A standalone NestJS service handles queued email via BullMQ and Redis. Nginx reverse-proxies the modules in production.",
+      "organization": "Periyar University",
+      "technologies": [
+        "React 19",
+        "Vite",
+        "React Router 7",
+        "Bootstrap 5",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "NestJS",
+        "Prisma",
+        "JWT",
+        "Argon2",
+        "Redis",
+        "BullMQ",
+        "Nodemailer",
+        "Docker",
+        "Nginx"
+      ],
+      "deploymentNote": null
+    },
+    {
+      "slug": "zara-ai-platform",
+      "cover": {
+        "id": "5ec42df6-363d-42cc-8a3b-d688a3316382",
+        "alt": "Screenshot of the zara project",
+        "url": "/assets/projects/zara-1280.webp",
+        "kind": "image",
+        "width": 1280,
+        "height": 800
+      },
+      "order": 2,
+      "title": "Zara AI Platform",
+      "status": "live",
+      "liveUrl": "https://zara-ai-assists.netlify.app/",
+      "problem": null,
+      "results": [],
+      "summary": "An AI-powered web platform focused on providing an interactive assistant experience through a modern web interface and AI service integrations.",
+      "category": "AI Platform / Full-Stack Web Application",
+      "featured": true,
+      "features": [],
+      "githubUrl": "https://github.com/majeed74905/zara-ai-frontend",
+      "solutions": [],
+      "challenges": [],
+      "highlights": [
+        "Integrates two model providers — Google Gemini (@google/genai) and Groq — behind a shared model manager",
+        "In-browser code workspace built on Monaco Editor and CodeSandbox Sandpack",
+        "Chat, voice, live-session and image modes alongside study tools such as exam prep and flashcards",
+        "Diagram rendering through Graphviz (viz.js)",
+        "Google OAuth sign-in with local persistence via IndexedDB for offline use"
+      ],
+      "shortTitle": "Zara AI",
+      "description": [],
+      "architecture": null,
+      "organization": null,
+      "technologies": [
+        "React 18",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router 6",
+        "Framer Motion",
+        "Google Gemini",
+        "Groq",
+        "Monaco Editor",
+        "Sandpack",
+        "Google OAuth",
+        "IndexedDB",
+        "Netlify"
+      ],
+      "deploymentNote": null
+    },
+    {
+      "slug": "diabetes-prediction",
+      "cover": {
+        "id": "3fdebbf7-a426-4b45-9266-411be3b6c57a",
+        "alt": "Screenshot of the diabetes project",
+        "url": "/assets/projects/diabetes-1280.webp",
+        "kind": "image",
+        "width": 1280,
+        "height": 800
+      },
+      "order": 3,
+      "title": "Diabetes Prediction",
+      "status": "live",
+      "liveUrl": "https://diabetic-prediction-y2qs.onrender.com/",
+      "problem": null,
+      "results": [],
+      "summary": "A machine-learning based web application that predicts the likelihood of diabetes using user-provided input parameters. The project demonstrates the integration of a trained machine-learning workflow with a web-accessible prediction interface.",
+      "category": "Machine Learning",
+      "featured": true,
+      "features": [],
+      "githubUrl": "https://github.com/majeed74905/diabetic-prediction",
+      "solutions": [],
+      "challenges": [],
+      "highlights": [
+        "Logistic Regression classifier trained with scikit-learn",
+        "StandardScaler feature scaling, with model and scaler persisted via joblib",
+        "Eight clinical inputs, including glucose, BMI, insulin and diabetes pedigree function",
+        "Separate preprocessing, training and prediction modules, plus an EDA notebook",
+        "Deployed on Render under Gunicorn with a health-check endpoint"
+      ],
+      "shortTitle": "Diabetes Prediction",
+      "description": [],
+      "architecture": null,
+      "organization": null,
+      "technologies": [
+        "Python 3.11",
+        "Flask",
+        "scikit-learn",
+        "Logistic Regression",
+        "pandas",
+        "NumPy",
+        "joblib",
+        "Gunicorn",
+        "Render"
+      ],
+      "deploymentNote": null
+    },
+    {
+      "slug": "online-library-management-system",
+      "cover": null,
+      "order": 4,
+      "title": "Online Library Management System",
+      "status": "local",
+      "liveUrl": null,
+      "problem": null,
+      "results": [],
+      "summary": "An online library management system developed to digitize core library operations, including the management of library records and common CRUD-based workflows through a web interface.",
+      "category": "Web Application",
+      "featured": false,
+      "features": [],
+      "githubUrl": "https://github.com/majeed74905/online-library-management-system",
+      "solutions": [],
+      "challenges": [],
+      "highlights": [
+        "Separate administrator and student areas with session-based login",
+        "CRUD management for books, authors and categories",
+        "Student registration, book issue and return tracking with borrowing history",
+        "Database access through PDO prepared statements against MySQL"
+      ],
+      "shortTitle": "Library Management System",
+      "description": [],
+      "architecture": null,
+      "organization": null,
+      "technologies": [
+        "PHP",
+        "PDO",
+        "MySQL",
+        "Bootstrap",
+        "jQuery",
+        "DataTables"
+      ],
+      "deploymentNote": "Local deployment"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "google-technical-support",
+      "date": "28 December 2023",
+      "type": "certificate",
+      "image": {
+        "id": "1669e252-b71e-469e-8ffc-9cd136ba0c9e",
+        "alt": "Technical Support Fundamentals certificate",
+        "url": "/assets/certificates/google-technical-support-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Technical Support Fundamentals",
+      "document": {
+        "id": "953993dc-4554-40ec-9257-25e286174ef7",
+        "alt": null,
+        "url": "/assets/documents/certificates/google-technical-support.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": true,
+      "description": "An online non-credit course authorised by Google and offered through Coursera.",
+      "credentialId": null,
+      "organization": "Google · Coursera",
+      "verificationUrl": "https://coursera.org/verify/5P6T26PGMSK9"
+    },
+    {
+      "id": "iit-bombay-intro-to-computers",
+      "date": "26 August 2023",
+      "type": "certificate",
+      "image": {
+        "id": "26ac1a4b-3060-46a6-a507-b5d48888c7ea",
+        "alt": "Introduction to Computers certificate",
+        "url": "/assets/certificates/iit-bombay-intro-to-computers-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Introduction to Computers",
+      "document": {
+        "id": "d5e71eac-a208-4097-9d76-00f0457072e5",
+        "alt": null,
+        "url": "/assets/documents/certificates/iit-bombay-intro-to-computers.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": true,
+      "description": "Training organised at Islamiah College (Autonomous), completed with an online exam conducted remotely from IIT Bombay. Score: 100%.",
+      "credentialId": "3317078B6Y",
+      "organization": "Spoken Tutorial Project, IIT Bombay",
+      "verificationUrl": null
+    },
+    {
+      "id": "isea-cyber-security",
+      "date": "30 December 2023",
+      "type": "certificate",
+      "image": {
+        "id": "56e3b54d-cd65-4ed2-9fcf-7cffafaab761",
+        "alt": "Cyber Security certificate",
+        "url": "/assets/certificates/isea-cyber-security-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Cyber Security",
+      "document": {
+        "id": "5100ed4b-d498-4228-95d7-ca7b64cd10cf",
+        "alt": null,
+        "url": "/assets/documents/certificates/isea-cyber-security.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": true,
+      "description": "Information Security Education and Awareness programme, Ministry of Electronics and Information Technology.",
+      "credentialId": "MeitY/ISEA/WCHP/033210",
+      "organization": "MeitY · ISEA",
+      "verificationUrl": null
+    },
+    {
+      "id": "simplilearn-data-science-python",
+      "date": "29 December 2023",
+      "type": "certificate",
+      "image": {
+        "id": "afecdb47-6341-4baa-b007-8215a1ee2da6",
+        "alt": "Data Science with Python certificate",
+        "url": "/assets/certificates/simplilearn-data-science-python-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Data Science with Python",
+      "document": {
+        "id": "3169aba5-0057-47f0-8985-0bc24ac1c349",
+        "alt": null,
+        "url": "/assets/documents/certificates/simplilearn-data-science-python.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": true,
+      "description": null,
+      "credentialId": "4748011",
+      "organization": "Simplilearn",
+      "verificationUrl": null
+    },
+    {
+      "id": "tcs-ion-communication-skills",
+      "date": "19 January 2024",
+      "type": "certificate",
+      "image": {
+        "id": "157e8534-2f72-41dd-9b19-2f3c4866b485",
+        "alt": "Communication Skills certificate",
+        "url": "/assets/certificates/tcs-ion-communication-skills-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Communication Skills",
+      "document": {
+        "id": "14f1cfa0-51b7-421b-b808-305226c8a5cf",
+        "alt": null,
+        "url": "/assets/documents/certificates/tcs-ion-communication-skills.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": false,
+      "description": "Covering the process of communication, barriers to communication, and verbal and non-verbal communication.",
+      "credentialId": "91306-25782095-1016",
+      "organization": "TCS iON",
+      "verificationUrl": null
+    },
+    {
+      "id": "infosys-python-basics",
+      "date": "30 December 2023",
+      "type": "certificate",
+      "image": {
+        "id": "137aad22-74c7-418b-985a-c2d26bc2ceb4",
+        "alt": "Python Basics certificate",
+        "url": "/assets/certificates/infosys-python-basics-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Python Basics",
+      "document": {
+        "id": "2ecaa809-c108-4060-8386-80e4f3487deb",
+        "alt": null,
+        "url": "/assets/documents/certificates/infosys-python-basics.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": false,
+      "description": null,
+      "credentialId": null,
+      "organization": "Infosys Springboard",
+      "verificationUrl": "https://verify.onwingspan.com"
+    },
+    {
+      "id": "infosys-voice-controlled-robot",
+      "date": "29 December 2023",
+      "type": "certificate",
+      "image": {
+        "id": "b879aaa3-ba43-4b86-bbb1-2564026a641f",
+        "alt": "Voice Controlled Robot certificate",
+        "url": "/assets/certificates/infosys-voice-controlled-robot-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Voice Controlled Robot",
+      "document": {
+        "id": "9b2ae209-2563-4fed-9c76-3bbd383c77ce",
+        "alt": null,
+        "url": "/assets/documents/certificates/infosys-voice-controlled-robot.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": false,
+      "description": "Experiment 5 — Voice Controlled Robot (Skyrim Kit).",
+      "credentialId": null,
+      "organization": "Infosys Springboard",
+      "verificationUrl": "https://verify.onwingspan.com"
+    },
+    {
+      "id": "chandrayaan-3-mahaquiz",
+      "date": "2023",
+      "type": "competition",
+      "image": {
+        "id": "d7211839-7bba-4b60-be4c-5b19f241c1d6",
+        "alt": "Chandrayaan-3 Mahaquiz certificate",
+        "url": "/assets/certificates/chandrayaan-3-mahaquiz-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Chandrayaan-3 Mahaquiz",
+      "document": {
+        "id": "510f81fa-7c5f-4e25-9924-ecfac55bef1c",
+        "alt": null,
+        "url": "/assets/documents/certificates/chandrayaan-3-mahaquiz.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": false,
+      "description": "Certificate of participation in the national Chandrayaan-3 quiz.",
+      "credentialId": null,
+      "organization": "MyGov · ISRO",
+      "verificationUrl": null
+    },
+    {
+      "id": "great-learning-python",
+      "date": "July 2023",
+      "type": "certificate",
+      "image": {
+        "id": "5e0571bf-d84b-4459-8489-85203b8968bc",
+        "alt": "Python Programming certificate",
+        "url": "/assets/certificates/great-learning-python-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Python Programming",
+      "document": {
+        "id": "4d6ddb68-4410-4dec-8347-1d829f60efca",
+        "alt": null,
+        "url": "/assets/documents/certificates/great-learning-python.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": false,
+      "description": null,
+      "credentialId": null,
+      "organization": "Great Learning Academy",
+      "verificationUrl": null
+    },
+    {
+      "id": "mindluster-python",
+      "date": "14 October 2023",
+      "type": "certificate",
+      "image": {
+        "id": "203b2bd7-483d-4322-828b-2cb151818bc9",
+        "alt": "Python certificate",
+        "url": "/assets/certificates/mindluster-python-1200.webp",
+        "kind": "image",
+        "width": null,
+        "height": null
+      },
+      "title": "Python",
+      "document": {
+        "id": "81a54441-772e-447d-9607-2be6b6aaff6b",
+        "alt": null,
+        "url": "/assets/documents/certificates/mindluster-python.pdf",
+        "kind": "document",
+        "width": null,
+        "height": null
+      },
+      "featured": false,
+      "description": null,
+      "credentialId": "10788473669",
+      "organization": "Mindluster",
+      "verificationUrl": null
+    },
+    {
+      "id": "dote-typewriting-english-junior",
+      "date": "October 2023",
+      "type": "certificate",
+      "image": null,
+      "title": "Typewriting English (Junior) — Second Class",
+      "document": null,
+      "featured": false,
+      "description": "Government Technical Examinations, Board of Examinations, Chennai.",
+      "credentialId": "PC / GA23036228",
+      "organization": "Government of Tamil Nadu · Directorate of Technical Education",
+      "verificationUrl": null
+    }
+  ]
+}
