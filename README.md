@@ -38,7 +38,7 @@ checked on every build.
 ```bash
 npm install
 cp .env.example .env.local     # then edit
-npm run dev                    # http://localhost:5173
+npm run dev                    # http://localhost:3000
 ```
 
 The admin, separately:

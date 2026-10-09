@@ -22,6 +22,12 @@ const GOOGLE_FONTS_FILES = 'https://fonts.gstatic.com'
 function contentSecurityPolicy(mode: string): Plugin {
   return {
     name: 'inject-admin-csp',
+    /**
+     * BUILD ONLY, for the same reason as the public site's: React Fast Refresh
+     * injects its preamble as an inline script, and `script-src 'self'` blocks
+     * it, leaving a blank page. Verify the policy against `npm run preview`.
+     */
+    apply: 'build',
     transformIndexHtml() {
       const env = loadEnv(mode, process.cwd(), '')
       const api = (env.VITE_API_BASE_URL ?? '').replace(/\/+$/, '')

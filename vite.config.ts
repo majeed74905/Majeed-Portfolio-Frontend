@@ -23,6 +23,18 @@ const GOOGLE_FONTS_FILES = 'https://fonts.gstatic.com'
 function contentSecurityPolicy(mode: string): Plugin {
   return {
     name: 'inject-csp',
+    /**
+     * BUILD ONLY. The dev server is not a deployment target, and Vite's dev
+     * transport is fundamentally incompatible with this policy: React Fast
+     * Refresh injects its preamble as an INLINE script, which `script-src
+     * 'self'` blocks — and then the app never boots at all, which is a blank
+     * page rather than a subtle degradation.
+     *
+     * The production build has no inline script (that was the point of moving
+     * the font flip into the bundle), so the strict policy is both correct and
+     * exercisable there. Verify it against `npm run preview`, not `npm run dev`.
+     */
+    apply: 'build',
     transformIndexHtml() {
       const env = loadEnv(mode, process.cwd(), '')
       const endpoint = env.VITE_CONTACT_ENDPOINT
@@ -175,6 +187,24 @@ export default defineConfig(({ mode }) => ({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  /**
+   * The public site serves on 3000 locally; the API is on 8000.
+   *
+   * `strictPort` is on deliberately. Vite's default is to walk to the next free
+   * port, which would be silent and would then fail CORS against the API —
+   * `CORS_ORIGINS` names an exact origin, so a drifted port looks like a broken
+   * contact form rather than an occupied port. Failing to start says which.
+   *
+   * The admin runs its own dev server on 5174 (see admin/vite.config.ts).
+   */
+  server: {
+    port: 3000,
+    strictPort: true,
+  },
+  preview: {
+    port: 3000,
+    strictPort: true,
   },
   build: {
     target: 'es2022',
